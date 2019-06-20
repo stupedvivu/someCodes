@@ -1,6 +1,7 @@
 /*
 	program to find the factorial of a very large number
 	idea is to use an array to store very large number
+	help: https://www.geeksforgeeks.org/factorial-large-number/
 */
 
 #include <stdio.h>
