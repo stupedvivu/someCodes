@@ -20,6 +20,7 @@ int multiply(int x, int *result, int curr_size)
 		carry = temp_product / 10;
 	}
 	
+	//in case we have two digit carry..
 	while( carry ) {
 		result[curr_size] = carry % 10;
 		carry = carry / 10;
