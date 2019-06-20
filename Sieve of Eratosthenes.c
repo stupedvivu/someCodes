@@ -7,18 +7,19 @@
 
 void printPrimeUptoN(int n)
 {
-    int *table = (int *)malloc(sizeof(int)*(n+1));
+    int i, j;
     
-    for( int i = 0; i <= n; i++ ) {
+    int table[n+1];
+    
+    for( int i = 2; i <= n; i++ ) {
         table[i] = 1;
     }
     
-    for( int i = 2; i <= n; i++ ) {
-        int j = 2;
-        
-        while( (i*j) <= n ) {
-            table[i*j] = 0;
-            j++;
+    for( i = 2; i*i <= n; i++ ) {
+        if( table[i] == 1 ) {
+            for( j = i*i; j <= n; j += i ) {
+                table[j] = 0;
+            }
         }
     }
     
